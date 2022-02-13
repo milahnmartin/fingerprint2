@@ -5,7 +5,7 @@ import { Button } from "@mui/material";
 
 function App() {
   const handleDiscord = (): void => {
-    window.open("https://google.com");
+    window.open("https://discord.gg/YtXSfd87fF");
   };
 
   return (
