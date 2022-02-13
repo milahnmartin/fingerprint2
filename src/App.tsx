@@ -1,22 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.png";
+import "./App.css";
+import { Button } from "@mui/material";
 
 function App() {
+  const handleDiscord = (): void => {
+    window.open("https://google.com");
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
+    <div className='App'>
+      <header className='App-header'>
+        <img src={logo} className='App-logo' alt='logo' />
+        <p>Fingerprint ZA</p>
         <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+          className='App-link'
+          href='https://reactjs.org'
+          target='_blank'
+          rel='noopener noreferrer'
         >
-          Learn React
+          <Button variant='contained' onClick={handleDiscord} className='fp-discord'>
+            Join Discord
+          </Button>
         </a>
       </header>
     </div>
