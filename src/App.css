@@ -4,7 +4,6 @@
 
 .App-logo {
   height: 40vmin;
-  pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -40,4 +39,9 @@
 .fp-discord {
   position: relative;
   top: 50px;
+}
+
+.fp-info-btn {
+  position: relative;
+  top: 70px;
 }

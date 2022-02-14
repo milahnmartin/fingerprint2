@@ -1,7 +1,8 @@
 import React from "react";
 import logo from "./logo.png";
 import "./App.css";
-import { Button } from "@mui/material";
+import Button from "@mui/material/Button";
+import Header from "./components/Header";
 
 function App() {
   const handleDiscord = (): void => {
@@ -10,6 +11,7 @@ function App() {
 
   return (
     <div className='App'>
+      <Header />
       <header className='App-header'>
         <img src={logo} className='App-logo' alt='logo' />
         <p>Fingerprint ZA</p>
@@ -18,11 +20,13 @@ function App() {
           href='https://reactjs.org'
           target='_blank'
           rel='noopener noreferrer'
-        >
-          <Button variant='contained' onClick={handleDiscord} className='fp-discord'>
-            Join Discord
-          </Button>
-        </a>
+        ></a>
+        <Button variant='contained' onClick={handleDiscord} className='fp-discord'>
+          Join Discord
+        </Button>
+        <Button className='fp-info-btn' variant='outlined'>
+          Whats Fingerprint ZA
+        </Button>
       </header>
     </div>
   );
