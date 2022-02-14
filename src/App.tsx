@@ -3,7 +3,7 @@ import logo from "./logo.png";
 import "./App.css";
 import Button from "@mui/material/Button";
 import Header from "./components/Header";
-
+import { auth } from "./firebase-config";
 function App() {
   const handleDiscord = (): void => {
     window.open("https://discord.gg/YtXSfd87fF");

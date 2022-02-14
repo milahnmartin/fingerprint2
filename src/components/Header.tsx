@@ -51,7 +51,7 @@ const ResponsiveAppBar = () => {
             component='div'
             sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
           >
-            <img className='header-fp' src={logo} />
+            <img className='header-fp' src={logo} alt='fp-logo' />
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -96,7 +96,7 @@ const ResponsiveAppBar = () => {
             component='div'
             sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
           >
-            <img src={logo} className='fp-logo-header' />
+            <img src={logo} className='fp-logo-header' alt='fp-media-logo' />
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
