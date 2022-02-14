@@ -1,31 +1,17 @@
 import React from "react";
-import logo from "./logo.png";
-import "./App.css";
-import Button from "@mui/material/Button";
-import Header from "./components/Header";
-import { auth } from "./firebase-config";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Home from "./Pages/Home";
+import Login from "./Pages/Login";
+import About from "./Pages/About";
 function App() {
-  const handleDiscord = (): void => {
-    window.open("https://discord.gg/YtXSfd87fF");
-  };
-
   return (
-    <div className='App'>
-      <Header />
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <p>Fingerprint ZA</p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
-        ></a>
-        <Button variant='contained' onClick={handleDiscord} className='fp-discord'>
-          Join Discord
-        </Button>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/about' element={<About />} />
+      </Routes>
+    </Router>
   );
 }
 

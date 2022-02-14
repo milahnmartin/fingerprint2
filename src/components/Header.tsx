@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useEffect, ChangeEvent } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -13,6 +14,7 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import logo from "../logo.png";
 import "../Header.css";
+import { Link } from "react-router-dom";
 
 const pages = ["About", "CS:GO", "Fortnite", "Blog"];
 const settings = ["Profile", "Logout"];
@@ -20,7 +22,6 @@ const settings = ["Profile", "Logout"];
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
-
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -28,7 +29,8 @@ const ResponsiveAppBar = () => {
     setAnchorElUser(event.currentTarget);
   };
 
-  const handleCloseNavMenu = () => {
+  const handleCloseNavMenu = (event: React.MouseEvent<HTMLElement>) => {
+    window.location.assign("/" + event.currentTarget.textContent?.toLowerCase());
     setAnchorElNav(null);
   };
 
