@@ -25,7 +25,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build && rm -rf fb-host && mv build fb-host && firebase deploy",
-    "test": "--passWithNoTests",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
