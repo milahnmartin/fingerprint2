@@ -37,7 +37,12 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar position='static'>
+    <AppBar
+      position='static'
+      sx={{
+        backgroundColor: "gray",
+      }}
+    >
       <Container maxWidth='xl'>
         <Toolbar disableGutters>
           <Typography
@@ -46,7 +51,7 @@ const ResponsiveAppBar = () => {
             component='div'
             sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
           >
-            <img src='' />
+            <img className='header-fp' src={logo} />
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
