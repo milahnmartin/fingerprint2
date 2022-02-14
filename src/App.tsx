@@ -24,9 +24,6 @@ function App() {
         <Button variant='contained' onClick={handleDiscord} className='fp-discord'>
           Join Discord
         </Button>
-        <Button className='fp-info-btn' variant='outlined'>
-          Whats Fingerprint ZA
-        </Button>
       </header>
     </div>
   );
