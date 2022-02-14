@@ -22,6 +22,7 @@ const settings = ["Profile", "Logout"];
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
+  const [nav, setNav] = React.useState<String | HTMLElement>("/");
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -30,8 +31,9 @@ const ResponsiveAppBar = () => {
   };
 
   const handleCloseNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    window.location.assign("/" + event.currentTarget.textContent?.toLowerCase());
+    // window.location.assign("/" + event.currentTarget.textContent?.toLowerCase());
     setAnchorElNav(null);
+    // setNav(event.currentTarget.textContent?.toLowerCase());
   };
 
   const handleCloseUserMenu = () => {
