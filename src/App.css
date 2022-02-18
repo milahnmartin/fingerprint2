@@ -4,22 +4,23 @@
 
 .App-logo {
   height: 40vmin;
+  pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 60s linear;
+    animation: App-logo-spin infinite 20s linear;
   }
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 93vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 35px;
+  font-size: calc(10px + 2vmin);
   color: white;
 }
 
@@ -34,14 +35,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-.fp-discord {
-  position: relative;
-  top: 20px;
-}
-
-.fp-info-btn {
-  position: relative;
-  top: 40px;
 }
