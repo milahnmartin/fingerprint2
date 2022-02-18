@@ -3,8 +3,8 @@ name: fingerprint 2.0 CD
 on:
   push:
     branches: [production]
-  pull_request:
-    branches: [production]
+  # pull_request:
+  #   branches: [production]
 
 jobs:
   deployment:
