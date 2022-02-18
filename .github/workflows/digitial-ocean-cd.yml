@@ -2,12 +2,12 @@ name: fingerprint2.0 CD
 
 on:
   push:
-    branches: [master]
+    branches: [production]
   pull_request:
-    branches: [master]
+    branches: [production]
 
 jobs:
-  build:
+  deployment:
     runs-on: self-hosted
 
     steps:
